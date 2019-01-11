@@ -50,11 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-
-
-        super.onCreate(savedInstanceState);
+    super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         add=findViewById(R.id.ID_Button_Add);
         selectImg=findViewById(R.id.ID_Button_Image);
@@ -65,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
         adapter=new AnimaleAdapter(animali);
         testoInp.setText("");
         intent = new Intent(Intent.ACTION_PICK,MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override

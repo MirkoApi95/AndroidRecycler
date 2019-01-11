@@ -8,13 +8,14 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-public class AnimaleAdapter extends RecyclerView.Adapter<AnimaleHolder>{
+public class AnimaleAdapter extends RecyclerView.Adapter<AnimaleHolder> {
 
-    private ArrayList<Animale> animali;
+    public static ArrayList<Animale> animali;
 
     public AnimaleAdapter(ArrayList<Animale> animali) {
         this.animali = animali;
     }
+    public AnimaleAdapter(){}
 
     @NonNull
     @Override
@@ -42,5 +43,10 @@ public class AnimaleAdapter extends RecyclerView.Adapter<AnimaleHolder>{
     @Override
     public int getItemCount() {
         return animali.size();
+    }
+
+
+    public void deletee(int position) { //removes the row
+        notifyItemRemoved(position);
     }
 }
